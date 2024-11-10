@@ -20,3 +20,18 @@ print('Задача 2. Грубая математика')
 # x = -3 exp(x) = 0.049787068367863944
 # Введите число: -5.9
 # x = -6 exp(x) = 0.0024787521766663585
+
+import math
+
+amount = int(input("Введите количество чисел:\n"))
+
+for _ in range(amount):
+    number_x = float(input("Введите число: "))
+    if number_x > 0:
+        round_num = int(number_x + 0.9)
+        result = math.log(round_num)
+        print("х =", round_num, "log(x) = ", result)
+    else:
+        round_num = int(number_x - 0.9)
+        result = math.exp(round_num)
+        print("x = ", round_num, "exp(x) =", result)
