@@ -28,10 +28,10 @@ amount = int(input("Введите количество чисел:\n"))
 for _ in range(amount):
     number_x = float(input("Введите число: "))
     if number_x > 0:
-        round_num = int(number_x + 0.9)
+        round_num = math.ceil(number_x)
         result = math.log(round_num)
         print("х =", round_num, "log(x) = ", result)
     else:
-        round_num = int(number_x - 0.9)
+        round_num = math.floor(number_x)
         result = math.exp(round_num)
         print("x = ", round_num, "exp(x) =", result)
