@@ -21,3 +21,16 @@ print('Задача 5. Вот это объёмы!')
 # Пример 2
 # Введите радиус теоретически возможной планеты: 7000
 # Объём планеты Земля меньше в (1/0.754) = 1.326 раз
+
+import math 
+
+volume_earth = 1.08321 * 10**12
+radius_planet = float(input("Введите радиус теоретически возможной планеты: "))
+volume_planet = (4 / 3) * math.pi * radius_planet ** 3
+
+if volume_earth > volume_planet:
+    result = round(volume_earth / volume_planet, 3)
+    print("Объем планеты Земля больше в", result, "раз")
+else:
+    result = round(volume_planet / volume_earth, 3)
+    print(f'Объем планеты Земля меньше в (1/{round(1 / result, 3)}) = {result} раз')
